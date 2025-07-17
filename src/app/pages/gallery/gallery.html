@@ -1,2 +1,13 @@
-<p>gallery works!</p>
-<img src="assets/hero3.jpg" alt="">
+<h1 class="gallery-title">Art Gallery</h1>
+
+<div class="gallery-grid">
+  <div *ngFor="let artwork of artworks" class="art-card">
+    <div class="image-wrapper">
+      <img [src]="artwork.image" [alt]="artwork.title">
+    </div>
+    <div class="art-info">
+      <h3>{{ artwork.title }}</h3>
+      <p>{{ artwork.medium }} <span>&bull;</span> {{ artwork.year }}</p>
+    </div>
+  </div>
+</div>
