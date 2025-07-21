@@ -1,7 +1,7 @@
 <header>
   <div class="header-container">
     <div class="logo">
-      <a routerLink="/">Artistry Studio</a>
+      <a routerLink="/">Kangi Art</a>
     </div>
 
     <nav>
@@ -14,8 +14,9 @@
             >Home</a
           >
         </li>
-        <li><a routerLink="/gallery" routerLinkActive="active">Gallery</a></li>
         <li><a routerLink="/shop" routerLinkActive="active">Shop</a></li>
+
+        <li><a routerLink="/gallery" routerLinkActive="active">Gallery</a></li>
 
         <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
         <li><a routerLink="/about" routerLinkActive="active">About</a></li>
@@ -24,7 +25,7 @@
     </nav>
 
     <div class="header-actions">
-      <button class="btn-cta">Commission Art</button>
+      <button class="btn-cta">Cart ({{ cartItemCount }})</button>
     </div>
 
     <div class="mobile-menu-btn" (click)="toggleMenu()">
@@ -34,11 +35,13 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" [class.active]="menuOpen">
+
     <a routerLink="/" (click)="toggleMenu()">Home</a>
+    <a routerLink="/shop" (click)="toggleMenu()">Shop</a>
+
     <a routerLink="/gallery" (click)="toggleMenu()">Gallery</a>
     <a routerLink="/blog" (click)="toggleMenu()">Blog</a>
     <a routerLink="/about" (click)="toggleMenu()">About</a>
     <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
-    <button class="btn-cta">Commission Art</button>
   </div>
 </header>

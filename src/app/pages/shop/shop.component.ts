@@ -18,4 +18,5 @@ export class ShopComponent {
   ngOnInit(): void{
     this.products = this.productService.getProducts();
   }
+
 }

@@ -1,0 +1,125 @@
+/* ========== PRODUCT DETAILS ========== */
+.product-detail {
+  display: flex;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  gap: 50px;
+}
+
+.product-image {
+  flex: 1;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.frame-overlay {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 15px solid #f5f2eb;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.product-info h1 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.medium {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  display: block;
+  font-style: italic;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 30px;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.description {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 30px;
+}
+
+.description:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.out-of-stock {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 200px;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: #27ae60;
+  box-shadow: 0 8px 20px rgba(46, 204, 113, 0.35);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+  }
+}

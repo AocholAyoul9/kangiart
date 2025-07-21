@@ -1,98 +1,95 @@
 .about-container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #fff;
 }
 
 .profile-section {
   display: flex;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
   align-items: flex-start;
 }
 
 .profile-section img {
-  width: 40%;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 300px; /* Limit the image size */
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
 .profile-info {
-  flex: 1;
+  flex: 2 1 600px;
+}
+
+h1, h2, h3 {
+  color: #222;
+  margin-top: 1.5em;
 }
 
 h1 {
-  color: #2c3e50;
-  border-bottom: 2px solid #e74c3c;
-  padding-bottom: 10px;
-  display: inline-block;
+  font-size: 2.2em;
 }
 
 h2 {
-  color: #3498db;
-  margin-top: 25px;
+  font-size: 1.6em;
+  margin-top: 30px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-top: 20px;
 }
 
 p {
-  line-height: 1.8;
-  color: #555;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 10px 0 20px 0;
+}
+
+ul li {
+  margin-bottom: 8px;
 }
 
 .skills {
   background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 15px 20px;
+  border-left: 4px solid #555;
   margin-top: 30px;
 }
 
-.skills ul {
-  columns: 2;
-  list-style-type: none;
-  padding: 0;
+blockquote {
+  background: #f2f2f2;
+  border-left: 5px solid #999;
+  padding: 15px 20px;
+  font-style: italic;
+  margin: 20px 0;
+  color: #555;
 }
 
-.skills li {
-  padding: 8px 0;
-  border-bottom: 1px dashed #ddd;
-}
-
-
-
-/* ===== Responsive Adjustments ===== */
 @media (max-width: 768px) {
   .profile-section {
     flex-direction: column;
-    gap: 30px;
     align-items: center;
   }
 
   .profile-section img {
-    width: 100%;
-    max-width: 400px;
+    max-width: 90%;
+    margin-bottom: 20px;
   }
 
   .profile-info {
-    text-align: center;
-  }
-
-  .skills ul {
-    columns: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .skills {
-    padding: 15px;
-  }
-
-  .about-container {
-    padding: 30px 15px;
+    width: 100%;
   }
 }

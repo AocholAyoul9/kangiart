@@ -1,14 +1,19 @@
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                    url('https://picsum.photos/id/1070/1200/800');
+                    url('/hero2.jpg');
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
-  padding: 120px 20px;
+  padding: 90px 20px;
 }
 
-
+.profile-view-btn{
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
 .features {
   display: flex;
   justify-content: center;

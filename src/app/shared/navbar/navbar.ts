@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
-
+import { CartService } from '../../services/cart.service';
 @Component({
   selector: 'app-navbar',
   standalone:true,
@@ -11,6 +11,13 @@ import { RouterLink, RouterModule } from '@angular/router';
 export class Navbar {
 
   menuOpen = false;
+  cartItemCount = 0;
+
+   /* constructor(private cartService: CartService) {
+    this.cartService.getCartItems().subscribe(items => {
+      this.cartItemCount = items.length;
+    });
+  }*/
 
   toggleMenu(){
     this.menuOpen = !this.menuOpen;
