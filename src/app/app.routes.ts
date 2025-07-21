@@ -35,7 +35,13 @@ export const routes: Routes = [
     component: BlogDetail,
   },
   { path: 'shop', component: ShopComponent },
-  { path: 'product/:id', component: ProductDetailsComponent },
+  {
+    path: 'product/:id',
+    component: ProductDetailsComponent,
+    data: {
+      renderMode: 'default', 
+    },
+  },
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
 ];
