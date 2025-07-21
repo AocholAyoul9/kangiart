@@ -13,37 +13,37 @@ export class Gallery {
       title: 'Ocean Dreams',
       medium: 'Oil on Canvas',
       year: 2023,
-      image: 'https://picsum.photos/id/1018/400/500',
+      image: 'photo1.jpg',
     },
     {
       title: 'Mountain Sunrise',
       medium: 'Watercolor',
       year: 2022,
-      image: 'https://picsum.photos/id/1039/400/500',
+      image: 'photo2.jpg',
     },
     {
       title: 'Urban Jungle',
       medium: 'Acrylic',
       year: 2024,
-      image: 'https://picsum.photos/id/1040/400/500',
+      image: 'photo3.jpg',
     },
     {
       title: 'Silent Forest',
       medium: 'Digital Art',
       year: 2023,
-      image: 'https://picsum.photos/id/1043/400/500',
+      image: 'photo4.jpg',
     },
     {
       title: 'Desert Bloom',
       medium: 'Mixed Media',
       year: 2022,
-      image: 'https://picsum.photos/id/1047/400/500',
+      image: 'photo5.jpg',
     },
     {
       title: 'Cosmic Dance',
       medium: 'Oil on Canvas',
       year: 2024,
-      image: 'https://picsum.photos/id/1052/400/500',
+      image: 'photo7.jpg',
     },
   ];
 }
