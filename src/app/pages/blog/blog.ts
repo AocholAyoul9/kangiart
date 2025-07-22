@@ -1,35 +1,22 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component , OnInit} from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
   selector: 'app-blog',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './blog.html',
-  styleUrl: './blog.css'
+  styleUrl: './blog.css',
 })
-export class Blog {
+export class Blog implements OnInit{
+ 
+  blogPosts: any;
 
-  blogPosts = [
-  { 
-    title: 'Finding Inspiration in Nature', 
-    date: 'May 15, 2024', 
-    category: 'Creative Process',
-    excerpt: 'How hiking through forests transformed my approach to landscape painting...',
-    image: 'photo2.jpg'
-  },
-  { 
-    title: 'Mastering Color Theory', 
-    date: 'April 2, 2024', 
-    category: 'Techniques',
-    excerpt: 'Practical guide to creating harmonious color palettes for your paintings...',
-    image: 'photo6.jpg'
-  },
-  { 
-    title: 'Digital vs Traditional Tools', 
-    date: 'March 18, 2024', 
-    category: 'Art Tools',
-    excerpt: 'Comparing the creative experience across different artistic mediums...',
-    image: 'photo8.jpg'
+  constructor(private blogService: BlogService){}
+
+  ngOnInit(): void {
+      
+    this.blogPosts = this.blogService.getAllposts();
   }
-];
 }

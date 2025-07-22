@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
   background: #f8f9fa;
@@ -15,8 +15,11 @@ body {
   min-height: 100vh;
 }
 
-html, body {
+html,
+body {
   height: 100%;
+  overflow-x: hidden !important;
+  width: 100vw;
 }
 
 /* Add smooth scrolling */
@@ -24,9 +27,19 @@ html {
   scroll-behavior: smooth;
 }
 
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
 /* Main content wrapper */
 router-outlet + * {
-  min-height: calc(100vh - 70px - 350px); /* Adjust based on header/footer height */
+  min-height: calc(
+    100vh - 70px - 350px
+  ); /* Adjust based on header/footer height */
   display: block;
   padding-bottom: 40px; /* Space above footer */
 }

@@ -1,1 +1,6 @@
-<p>blog-detail works!</p>
+<div class="blog-post" *ngIf="post">
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.date }} | {{ post.category }}</p>
+  <img [src]="post.image" [alt]="post.title" />
+  <div *ngIf="safeContent" [innerHTML]="safeContent"></div>
+</div>
