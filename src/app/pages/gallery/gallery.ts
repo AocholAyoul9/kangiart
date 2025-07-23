@@ -46,4 +46,30 @@ export class Gallery {
       image: 'photo7.jpg',
     },
   ];
+
+  lightboxOpen = false;
+  currentIndex = 0;
+
+  get currentArtwork() {
+    return this.artworks[this.currentIndex];
+  }
+
+  openLightbox(index: number) {
+    this.currentIndex = index;
+    this.lightboxOpen = true;
+  }
+
+  closelightbox() {
+    this.lightboxOpen = !this.lightboxOpen;
+  }
+
+  nextImage(event: Event) {
+    event.stopPropagation();
+    this.currentIndex = (this.currentIndex + 1) % this.artworks.length;
+  }
+
+  prevImage(event: Event) {
+    event.stopPropagation();
+    this.currentIndex =(this.currentIndex -1 + this.artworks.length) % this.artworks.length;
+  }
 }
