@@ -11,7 +11,8 @@ export class BlogService {
         'Honoring a Legacy in Bronze and Fiberglass: The Sculpture of Dr. John Garang de Mabior',
       date: 'May 22, 2025',
       category: 'Creative Process',
-      excerpt: 'A behind-the-scenes look...',
+      excerpt:
+        'Honoring a Legacy in Bronze and Fiberglass: The Sculpture of Dr. John Garang de Mabior In a powerful tribute to one of South Sudan’s most iconic leaders, a sculpture of the late Dr. John Garang de Mabior Atem was created and installed in Maban County, Upper Nile State. This monumental piece was crafted by a dedicated team of visual artists: Angelo Govito, Stanislaus Vaida, Patrice Gundasiao Yanga, and Joseph Kangi, whose combined talents brought this vision to life The journey of the sculpture began in 2011 in Khartoum, where the fabrication process was initiated. Over the course of one and a half months, the team undertook a meticulous, multi-phase process to bring the likeness of Dr. Garang into physical form....',
       image: 'garang1.jpg',
       content: `<article>
   <h1>Honoring a Legacy in Bronze and Fiberglass: The Sculpture of Dr. John Garang de Mabior</h1>
@@ -45,7 +46,8 @@ export class BlogService {
       title: 'Mastering Color Theory',
       date: 'April 2, 2024',
       category: 'Techniques',
-      excerpt: 'Practical guide to color harmony...',
+      excerpt:
+        'Honoring a Legacy in Bronze and Fiberglass: The Sculpture of Dr. John Garang de Mabior In a powerful tribute to one of South Sudan’s most iconic leaders, a sculpture of the late Dr. John Garang de Mabior Atem was created and installed in Maban County, Upper Nile State. This monumental piece was crafted by a dedicated team of visual artists: Angelo Govito, Stanislaus Vaida, Patrice Gundasiao Yanga, and Joseph Kangi, whose combined talents brought this vision to life The journey of the sculpture began in 2011 in Khartoum, where the fabrication process was initiated. Over the course of one and a half months, the team undertook a meticulous, multi-phase process to bring the likeness of Dr. Garang into physical form....',
       image: 'photo6.jpg',
       content: `<article>
   <h1>Honoring a Legacy in Bronze and Fiberglass: The Sculpture of Dr. John Garang de Mabior</h1>

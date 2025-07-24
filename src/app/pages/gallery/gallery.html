@@ -1,7 +1,7 @@
 <h1 class="gallery-title">Art Gallery</h1>
 
 <div class="gallery-grid">
-  <div *ngFor="let artwork of artworks" class="art-card">
+  <div *ngFor="let artwork of artworks; let i = index" class="art-card" (click)="openLightbox(i)">
     <div class="image-wrapper">
       <img [src]="artwork.image" [alt]="artwork.title">
     </div>
@@ -10,4 +10,18 @@
       <p>{{ artwork.medium }} <span>&bull;</span> {{ artwork.year }}</p>
     </div>
   </div>
+</div>
+
+<div class="lightbox" *ngIf="lightboxOpen" (click)="closelightbox()">
+  <div class="light-content" (click)="$event.stopPropagation()">
+    <button class="lightbox-close" (click)="closelightbox()">X</button>
+    <button class="lightbox-nav prev" (click)="prevImage($event)"><-</button>
+   <img [src]="currentArtwork.image" [alt]="currentArtwork.title">
+   <button class="lightbox-nav next" (click)="nextImage($event)">-></button>
+   <div class="option">
+    <h3>{{currentArtwork.title}}</h3>
+    <p>{{currentArtwork.medium}} <span>&bull;</span>{{currentArtwork.year}}</p>
+   </div>
+  </div>
+
 </div>
