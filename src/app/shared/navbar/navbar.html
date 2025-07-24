@@ -1,7 +1,7 @@
 <header>
   <div class="header-container">
     <div class="logo">
-      <a routerLink="/">Kangi Art</a>
+      <a routerLink="/">KangiArt</a>
     </div>
 
     <nav>
@@ -16,8 +16,6 @@
         </li>
         <li><a routerLink="/about" routerLinkActive="active">About</a></li>
 
-        <li><a routerLink="/shop" routerLinkActive="active">Shop</a></li>
-
         <li><a routerLink="/gallery" routerLinkActive="active">Gallery</a></li>
 
         <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
@@ -25,9 +23,10 @@
       </ul>
     </nav>
 
+    <!--
     <div class="header-actions">
       <button class="btn-cta">Cart ({{ cartItemCount }})</button>
-    </div>
+    </div> -->
 
     <div class="mobile-menu-btn" (click)="toggleMenu()">
       <i class="fas fa-bars"></i>
@@ -38,9 +37,6 @@
   <div class="mobile-menu" [class.active]="menuOpen">
     <a routerLink="/" (click)="toggleMenu()">Home</a>
     <a routerLink="/about" (click)="toggleMenu()">About</a>
-
-    <a routerLink="/shop" (click)="toggleMenu()">Shop</a>
-
     <a routerLink="/gallery" (click)="toggleMenu()">Gallery</a>
     <a routerLink="/blog" (click)="toggleMenu()">Blog</a>
     <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
