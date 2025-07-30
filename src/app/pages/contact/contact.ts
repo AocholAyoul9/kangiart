@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import emailjs from '@emailjs/browser';
 import { FormsModule } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -17,6 +18,9 @@ export class Contact {
     message: '',
   };
 
+  private toastr = inject(ToastrService);
+  private cdr = inject(ChangeDetectorRef);
+
   sendEmail() {
     emailjs
       .send(
@@ -26,17 +30,18 @@ export class Contact {
         'nDlGAVa1AnbUOZHoQ'
       )
       .then(() => {
-        alert('Email sent successfully!');
         this.form = {
           user_name: '',
           user_email: '',
           subject: '',
           message: '',
         };
+        this.cdr.detectChanges();
+        this.toastr.success('Email sent successfully!');
       })
       .catch((error) => {
         console.error('Failed to send email:', error);
-        alert('Failed to send email. Please try again.');
+        this.toastr.error('Failed to send email. Please try again.');
       });
   }
 }
