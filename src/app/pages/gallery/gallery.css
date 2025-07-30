@@ -8,7 +8,7 @@
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+  gap: 30px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
@@ -140,7 +140,7 @@
   }
 
   .image-wrapper {
-    height: 180px;
+    height: 350px;
   }
 
   .art-info {

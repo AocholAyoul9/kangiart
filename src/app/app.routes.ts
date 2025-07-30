@@ -5,10 +5,6 @@ import { Gallery } from './pages/gallery/gallery';
 import { About } from './pages/about/about';
 import { Blog } from './pages/blog/blog';
 import { BlogDetail } from './pages/blog-detail/blog-detail';
-import { ShopComponent } from './pages/shop/shop.component';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
-import { CartComponent } from './components/cart/cart.component';
-import { CheckoutComponent } from './components/checkout/checkout.component';
 export const routes: Routes = [
   {
     path: '',
@@ -34,11 +30,4 @@ export const routes: Routes = [
     path: 'blog-details/:id',
     component: BlogDetail,  
   },
-  { path: 'shop', component: ShopComponent },
-  {
-    path: 'productId',
-    component: ProductDetailsComponent,
-  },
-  { path: 'cart', component: CartComponent },
-  { path: 'checkout', component: CheckoutComponent },
 ];
