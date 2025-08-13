@@ -1,6 +1,6 @@
 # Kangi Art – Artist Portfolio Website
 
-**Kangi Art** is a professional portfolio website built to showcase the artwork, exhibitions, and story of South Sudanese visual artist **Joseph Kangi**. The website offers a modern, mobile-friendly interface with sections for a gallery, online shop, blog, artist bio, and contact form. It was developed using **Angular** and **CSS** for the frontend, with a **Spring Boot** backend serving data via REST APIs. The full project is hosted on **Render**.
+**Kangi Art** is a professional portfolio website built to showcase the artwork, exhibitions, and story of South Sudanese visual artist **Joseph Kangi**. The website offers a modern, mobile-friendly interface with sections for a gallery,blog, artist bio, and contact form. It was developed using **Angular** and **CSS** for the frontend, with a **Spring Boot** backend serving data via REST APIs. The full project is hosted on **Render**.
 
 ---
 
@@ -9,7 +9,6 @@
 - **Home Page** – Intro to the artist and featured works  
 - **About Page** – Detailed biography and artistic journey  
 - **Gallery** – Organized collection of artwork  
-- **Shop** – Artworks available for purchase  
 - **Blog** – Updates, thoughts, and news from the artist  
 - **Contact** – Visitors can send messages or inquiries  
 
