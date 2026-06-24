@@ -1,17 +1,26 @@
-  <h1 class="blog-title">Artistic Insight</h1>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Journal</span>
+    <h1>Artistic Insight</h1>
+    <p>Reflections on process, culture, and the stories behind the work.</p>
+  </div>
+</div>
 
 <div class="blog-container">
-  <div *ngFor="let post of blogPosts" class="blog-post">
-    <img [src]="post.image" [alt]="post.title" />
+  <div *ngFor="let post of blogPosts" class="blog-card">
+    <a [routerLink]="['/blog-details', post.id]" class="blog-card-image">
+      <img [src]="post.image" [alt]="post.title" />
+    </a>
     <div class="post-content">
-      <h2>{{ post.title }}</h2>
       <div class="post-meta">
-        <span>{{ post.date }}</span>
-        <span>{{ post.category }}</span>
+        <span class="post-date">{{ post.date }}</span>
+        <span class="post-category">{{ post.category }}</span>
       </div>
-
+      <h2><a [routerLink]="['/blog-details', post.id]">{{ post.title }}</a></h2>
       <p>{{ post.excerpt }}</p>
-      <a [routerLink]="['/blog-details', post.id]">Read More -></a>
+      <a class="read-more" [routerLink]="['/blog-details', post.id]">
+        Read More <i class="fas fa-arrow-right"></i>
+      </a>
     </div>
   </div>
 </div>

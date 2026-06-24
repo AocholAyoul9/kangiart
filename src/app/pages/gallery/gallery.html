@@ -1,9 +1,18 @@
-<h1 class="gallery-title">Art Gallery</h1>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Portfolio</span>
+    <h1>Art Gallery</h1>
+    <p>A curated collection of sculptures, drawings, and works spanning decades of artistic practice.</p>
+  </div>
+</div>
 
 <div class="gallery-grid">
   <div *ngFor="let artwork of artworks; let i = index" class="art-card" (click)="openLightbox(i)">
     <div class="image-wrapper">
       <img [src]="artwork.image" [alt]="artwork.title">
+      <div class="art-overlay">
+        <i class="fas fa-expand"></i>
+      </div>
     </div>
     <div class="art-info">
       <h3>{{ artwork.title }}</h3>
@@ -14,14 +23,19 @@
 
 <div class="lightbox" *ngIf="lightboxOpen" (click)="closelightbox()">
   <div class="light-content" (click)="$event.stopPropagation()">
-    <button class="lightbox-close" (click)="closelightbox()">X</button>
-    <button class="lightbox-nav prev" (click)="prevImage($event)"><-</button>
-   <img [src]="currentArtwork.image" [alt]="currentArtwork.title">
-   <button class="lightbox-nav next" (click)="nextImage($event)">-></button>
-   <div class="option">
-    <h3>{{currentArtwork.title}}</h3>
-    <p>{{currentArtwork.medium}} <span>&bull;</span>{{currentArtwork.year}}</p>
-   </div>
+    <button class="lightbox-close" (click)="closelightbox()" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-nav prev" (click)="prevImage($event)" aria-label="Previous">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <img [src]="currentArtwork.image" [alt]="currentArtwork.title">
+    <button class="lightbox-nav next" (click)="nextImage($event)" aria-label="Next">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-caption">
+      <h3>{{ currentArtwork.title }}</h3>
+      <p>{{ currentArtwork.medium }} <span>&bull;</span> {{ currentArtwork.year }}</p>
+    </div>
   </div>
-
 </div>

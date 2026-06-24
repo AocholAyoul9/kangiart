@@ -3,10 +3,11 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-blog-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './blog-detail.html',
   styleUrl: './blog-detail.css'
 })
